@@ -1,0 +1,22 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    font-size: 1.4rem
+}
+
+.iconset{
+    margin: 4rem;
+}
+
+.icon-wrapper{
+    float: left;
+    width: 25%;
+    height: 17rem;
+}
+
+
+.icon-wrapper

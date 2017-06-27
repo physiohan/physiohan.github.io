@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 포지셔닝 테크닉 &lt; z-index</title>
+    <style>
+        html{font-size: 10px;}
+        body{margin: 5rem;}
+        .box {padding: 1rem; border: 1px solid #aaa;}
+        .parent{background: #bcbcbc;}
+        .child{width: 14rem; height: 14rem; background: #fff;}
+/*부모가 다른 자식들 간의 z-index 경쟁은 아무 소용 없다.
+부모의 z-index가 높아야 자식의 z-index영향도 반영된다*/
+
+        .one{
+            position: relative;
+            z-index: 100;
+            background-color: hsl(345.4, 65%, 70%)
+            }
+        .two{
+            position: absolute;
+            z-index: 100;
+            /*text-shadow: x y blur spread color;*/
+            text-shadow: 0 0 0.5rem hsl(167, 65%, 40%);
+            background-color: hsl(167, 65%, 70%);
+            }
+        .three{
+            position: absolute;
+            z-index: 1000;
+            top: 150px;
+            left: 50px;
+            background-color: hsl(243, 65%, 70%)
+            }
+    </style>
+</head>
+<body>
+
+    <div class="box parent">
+        <!--.box.child.one+.box.child.two+.box.child.three-->
+        <div class="box child one">one</div>
+        <div class="box child two">two</div>
+        <div class="box child three">three</div>
+    </div>
+    
+</body>
+</html>

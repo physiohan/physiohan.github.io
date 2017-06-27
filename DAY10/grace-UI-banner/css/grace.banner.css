@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+
+/*사용자가 선택한 블록을 스타일함으로서, 디자이너가 톤앤매너를 지키고자 할 경우 사용*/
+::selection{
+    background: #dba68f;
+    color: #fff;
+
+}
+
+.baskerville{
+    font-family: 'Libre Baskerville', serif;
+}
+.is-italic{
+    font-style: italic;
+}
+
+
+.montserrat{
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.montserrat.is-bold{
+    font-weight: 700; /*bold*/
+}
+
+/*배너디자인*/
+html{
+
+}
+
+.grace-ui.banner{
+    position: absolute;
+    width: 580px;
+    height: 215px; 
+    background: #fff url("../images/people.png") no-repeat 88px 9px;
+    box-shadow: none;
+    /*둥근테두리 radius*/
+    border-radius: 10px;
+    transition: box-shadow 1.2s ease-in-out
+}
+
+.grace-ui.banner:hover{
+box-shadow:0 0 30px rgba(0,0,0,0.2);
+}
+
+.is-centerXY{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -107.5px;
+    margin-left: -290px;
+}
+
+.banner-category{
+    position: absolute;
+    top: 44%;
+    left: 20px;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+.banner-headline{
+    position: absolute;
+    color: #dba68f;
+    font-size: 36px;
+    line-height: 1.1111;
+    top: -10px;
+    right: 61px;
+}
+
+.banner-reivew{
+    /*위치*/
+}
+
+.banner-reivew *{
+    position: absolute;
+    bottom: 10px;
+    right: 70px;
+    font-size: 13px;
+    padding-left: 20px;
+    transition: all 600ms ease-in-out;
+}
+
+.banner-reivew-link:hover{
+    background: #dba68f;
+}
+
+/*개별디자인*/
+.banner-review .review-view{
+margin-right: 20px;
+background: url("../images/icon-view.png") no-repeat 0 50%;
+}
+.banner-review .review-comments{
+    background: url("../images/icon-com.png") no-repeat 0 50%;
+}
+
+.banner-review-link{
+    position: absolute;
+    top: 121px;
+    right: 50px;
+    padding: 1em 1.5em 1.0714em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    font-size: 14px;
+    color: #ffffff;
+    background: #000;
+    border-radius: 20px;
+}
